@@ -1,0 +1,22 @@
+PODS:
+  - Firebase (2.3.3)
+  - PNChartSwift (0.0.2)
+
+DEPENDENCIES:
+  - Firebase (>= 2.3.3)
+  - PNChartSwift (from `https://github.com/kevinzhow/PNChart-Swift.git`)
+
+EXTERNAL SOURCES:
+  PNChartSwift:
+    :git: https://github.com/kevinzhow/PNChart-Swift.git
+
+CHECKOUT OPTIONS:
+  PNChartSwift:
+    :commit: f1d1b0451686f47d691a6f04f9cd2619650fac44
+    :git: https://github.com/kevinzhow/PNChart-Swift.git
+
+SPEC CHECKSUMS:
+  Firebase: 2db60272f68ce40c7d47e5ae6eddc16977c65d4c
+  PNChartSwift: bcdfbffd65920072463eff42d0dfb46189bf4495
+
+COCOAPODS: 0.38.2
