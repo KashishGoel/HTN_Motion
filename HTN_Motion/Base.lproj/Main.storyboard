@@ -36,27 +36,12 @@
                     </view>
                     <connections>
                         <outlet property="peopleCountLabel" destination="tON-hz-i4M" id="WNj-cd-t7z"/>
-                        <segue destination="rS3-R9-Ivy" kind="modal" identifier="showMetrics" id="ypg-vL-Cgl"/>
+                        <segue destination="pGg-6v-bdr" kind="modal" identifier="showMetrics" id="6IE-3H-cyV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSY-z4-7zn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-524" y="60"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cUi-kZ-frf">
-            <objects>
-                <navigationController id="rS3-R9-Ivy" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="pGg-6v-bdr" kind="relationship" relationship="rootViewController" id="RxB-wf-QIq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-96" y="60.586666666666666"/>
+            <point key="canvasLocation" x="-359" y="52"/>
         </scene>
         <!--Master-->
         <scene sceneID="VgW-fR-Quf">
