@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CFC982FF-2AB7-4A5E-AC80-1FFE59B84871</string>
+	<key>IDESourceControlProjectName</key>
+	<string>HTN_Motion</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>05A9ADD1CFD5843753905307FA9E82059265FD70</key>
+		<string>https://github.com/KashishGoel/HTN_Motion.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>HTN_Motion.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>05A9ADD1CFD5843753905307FA9E82059265FD70</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/KashishGoel/HTN_Motion.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>05A9ADD1CFD5843753905307FA9E82059265FD70</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>05A9ADD1CFD5843753905307FA9E82059265FD70</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HTN_Motion</string>
+		</dict>
+	</array>
+</dict>
+</plist>

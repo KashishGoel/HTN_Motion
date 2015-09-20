@@ -9,9 +9,9 @@
 import UIKit
 import PNChartSwift
 
-class MasterViewController: UITableViewController, PNChartDelegate {
-    var mainVC = ViewController()
-     var array:[Int] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+class MasterViewController: UIViewController, PNChartDelegate {
+    var mainVC = DetailViewController()
+     var array1:[Int] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,9 +19,14 @@ class MasterViewController: UITableViewController, PNChartDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let array = mainVC.peopleArray
-        dump(array)
+         array1 = mainVC.array
+        dump(array1)
         // Do any additional setup after loading the view.
+    }
+   
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,7 +47,7 @@ class MasterViewController: UITableViewController, PNChartDelegate {
         switch segue.identifier! as NSString {
         case "lineChart":
             //Add LineChart
-            ChartLabel.text = "Line Chart"
+            ChartLabel.text = "Visitors over the Day"
             
             var lineChart:PNLineChart = PNLineChart(frame: CGRectMake(0, 135.0, 360, 200.0))
             lineChart.yLabelFormat = "%1.1f"
@@ -55,7 +60,7 @@ class MasterViewController: UITableViewController, PNChartDelegate {
             lineChart.delegate = self
             
             // Line Chart Nr.1
-            var data01Array: [CGFloat] = [60.1, 160.1, 126.4, 262.2, 186.2, 127.2, 176.2]
+            var data01Array: [CGFloat] = [1, 8, 44, 25, 90, 88, 60]
             var data01:PNLineChartData = PNLineChartData()
             data01.color = PNGreenColor
             data01.itemCount = data01Array.count
@@ -77,7 +82,7 @@ class MasterViewController: UITableViewController, PNChartDelegate {
             
         case "barChart":
             //Add BarChart
-            ChartLabel.text = "Bar Chart"
+            ChartLabel.text = "Visitors Over The Week"
             
             var barChart = PNBarChart(frame: CGRectMake(0, 135.0, 320.0, 200.0))
             barChart.backgroundColor = UIColor.clearColor()
@@ -93,8 +98,8 @@ class MasterViewController: UITableViewController, PNChartDelegate {
             
             
             barChart.labelMarginTop = 5.0
-            barChart.xLabels = ["SEP 1","SEP 2","SEP 3","SEP 4","SEP 5","SEP 6","SEP 7"]
-            barChart.yValues = [1,24,12,18,30,10,21]
+            barChart.xLabels = ["Sept 14","Sept 15","Sept 16","Sept 17","Sept 18","Sept 19","Sept 20", "8", "", "", "", "12","","","","16","","","", "20", "", "", "", "24"]
+            barChart.yValues = [21,24,12,18,30,10,1]
             barChart.strokeChart()
             
             barChart.delegate = self
@@ -126,3 +131,5 @@ class MasterViewController: UITableViewController, PNChartDelegate {
     }
 
 }
+
+

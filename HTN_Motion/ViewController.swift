@@ -10,19 +10,24 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController {
+  
+    
     @IBOutlet weak var peopleCountLabel: UILabel!
+    
     private let ref = Firebase(url: "https://motion.firebaseio.com")
     var countNumber = 0
     var peopleArray:[Int] = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     //[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]
 
+   
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showMetrics" {
-            let mvC:MasterViewController = segue.destinationViewController as! MasterViewController
-            mvC.mainVC = self
-            mvC.array = peopleArray
+        if segue.identifier == "showDetail" {
+            let dVC:DetailViewController = segue.destinationViewController as! DetailViewController
+            dVC.mainVC = self
             
-        
+            dVC.array = peopleArray
+            
+            
         }
     }
     
@@ -30,22 +35,33 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        peopleCountLabel.text = "\(countNumber)"
+        //peopleCountLabel.text = "\(countNumber)"
         firebaseCall()
 
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+//    @IBAction func metricsPressed(sender: UIButton) {
+//        
+//    self.performSegueWithIdentifier("showMetrics", sender: self)
+//        
+//    }
+    
+    
     @IBAction func metricsPressed(sender: UIButton) {
-        
-    self.performSegueWithIdentifier("showMetrics", sender: self)
-        
+        self.performSegueWithIdentifier("showDetail", sender: self)
     }
+    
     func firebaseCall () {
     
         ref.observeEventType(.Value, withBlock: { snapshot in
@@ -62,7 +78,9 @@ class ViewController: UIViewController {
                 
             println("time is \(hour)")
             var met = people
-            self.peopleArray[hour] += people
+            let originalVal = self.peopleArray[hour]
+            if people > originalVal {
+                self.peopleArray[hour] = people}
             dump(self.peopleArray)
             
             }, withCancelBlock: { error in
